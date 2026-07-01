@@ -1,0 +1,66 @@
+/* ===============================
+   Chatlytics AI Theme
+   =============================== */
+
+html,
+body,
+[data-testid="stAppViewContainer"]{
+    background-color:#0F1117;
+    color:#F8F8F8;
+}
+
+/* Sidebar */
+
+[data-testid="stSidebar"]{
+    background-color:#161B22;
+}
+
+/* Titles */
+
+h1,h2,h3,h4{
+    color:#D4AF37;
+}
+
+/* Metric Cards */
+
+.metric-card{
+    background:#1E232B;
+    padding:18px;
+    border-radius:15px;
+    border-left:6px solid #D4AF37;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+
+/* Insight Box */
+
+.insight-box{
+    background:#1E232B;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #D4AF37;
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+    color:#BBBBBB;
+    margin-top:50px;
+    font-size:14px;
+}
+
+/* Buttons */
+
+.stButton>button{
+
+    background:#D4AF37;
+    color:black;
+    border-radius:10px;
+    border:none;
+    font-weight:bold;
+}
+
+.stButton>button:hover{
+
+    background:#E6C14A;
+}
