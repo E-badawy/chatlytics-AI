@@ -6,170 +6,374 @@
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive_Charts-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## Overview
 
-**Chatlytics AI** is an interactive WhatsApp Conversation Intelligence Dashboard that transforms exported WhatsApp chats into actionable insights through data analytics, business intelligence, natural language processing (NLP), and visualisation.
+# 🤖 WhatsApp Fashion AI Agent
 
-Unlike traditional WhatsApp chat analysers that simply display statistics, Chatlytics AI provides executive-level summaries, conversation health scoring, interactive dashboards, and actionable recommendations to help users better understand communication patterns.
+An AI-powered conversational fashion sales assistant that transforms WhatsApp into an intelligent e-commerce platform capable of understanding customer requests, recommending products, sending product images, answering questions naturally, processing orders, and seamlessly handing conversations over to human staff when necessary.
 
----
-
-## Features
-
-### Executive Intelligence
-
-* Executive summary of the conversation
-* Conversation duration
-* Number of participants
-* Peak activity period
-* Engagement level
-* Most active participant
-
-### Conversation Health Score
-
-* Overall communication quality score
-* Engagement classification
-* Rule-based analytical scoring model
-
-### Descriptive Analytics
-
-* Total messages
-* Total words
-* Media shared
-* Links shared
-* Emoji usage
-
-### Interactive Visualisations
-
-* Monthly conversation trend
-* Daily conversation activity
-* Most active participants
-* Most frequently used words
-* Emoji distribution
-* Word cloud
-
-### Actionable Insights
-
-* Automated communication recommendations
-* Participation balance analysis
-* Engagement observations
-* Media and emoji behaviour
-
-### Export
-
-* Download processed dataset as CSV
+The project combines Artificial Intelligence, Large Language Models (LLMs), Meta WhatsApp Cloud API, Flask, SQLite, and a modern web-based administration console into a complete conversational commerce solution.
 
 ---
 
-## Technology Stack
+# Project Overview
+
+Traditional WhatsApp businesses often respond manually to hundreds of customer enquiries every day. Customers repeatedly ask:
+
+* Do you have this dress?
+* How much is it?
+* What colours are available?
+* Can I see another picture?
+* Do you have my size?
+* How do I pay?
+* Where is my order?
+
+Responding manually creates delays, inconsistent customer experiences, and limits business scalability.
+
+This project solves that problem by engineering an intelligent AI sales assistant capable of handling the majority of customer interactions autonomously while allowing human staff to intervene whenever necessary.
+
+---
+
+# Key Features
+
+## AI Fashion Sales Assistant
+
+The assistant understands natural language rather than relying on fixed keyword matching.
+
+Customers can ask questions conversationally such as:
+
+* Show me red gowns
+* I need something for a wedding
+* Do you have handbags?
+* Send another picture
+* How much is the emerald dress?
+* I want size XL
+
+The AI searches the product catalogue, identifies the most relevant products, and generates intelligent responses.
+
+---
+
+## Intelligent Product Search
+
+The search engine combines:
+
+* SQL filtering
+* Tokenised keyword matching
+* Product scoring
+* Category matching
+* Colour matching
+* Size matching
+* Description similarity
+
+This provides far better search results than simple database lookups.
+
+---
+
+## WhatsApp Cloud API Integration
+
+The application communicates directly with Meta's WhatsApp Cloud API.
+
+Supported capabilities include:
+
+* Receiving customer messages
+* Sending AI responses
+* Sending product images
+* Sending order confirmations
+* Manual staff replies
+* Webhook verification
+
+---
+
+## Product Catalogue Management
+
+Administrators can:
+
+* Add products
+* Edit products
+* Delete products
+* Upload product images
+* Update stock
+* Mark featured products
+* Manage categories
+* Manage colours
+* Manage sizes
+
+All updates immediately become available to the AI.
+
+---
+
+## Image Delivery
+
+Products support multiple images.
+
+The AI automatically sends product images whenever customers request:
+
+* picture
+* image
+* photo
+* show me
+* another picture
+
+Both external image URLs and locally uploaded images are supported.
+
+---
+
+## Story Catalogue
+
+Products can be linked to WhatsApp Status stories.
+
+Customers asking questions such as:
+
+> "How much is the dress from today's status?"
+
+can receive intelligent responses because the AI maintains relationships between story posts and products.
+
+---
+
+## Human Handoff
+
+Staff members can:
+
+* Pause AI
+* Resume AI
+* View conversations
+* Reply manually
+
+When AI is paused for a customer, human operators take complete control of the conversation.
+
+---
+
+## Customer Memory
+
+The assistant stores:
+
+* customer names
+* addresses
+* conversation history
+* previous interactions
+* AI pause state
+
+allowing contextual conversations.
+
+---
+
+## Order Processing
+
+Customers can place orders directly through WhatsApp.
+
+Orders contain:
+
+* products
+* quantities
+* subtotal
+* delivery fee
+* payment status
+* customer information
+
+The system automatically stores orders inside the database.
+
+---
+
+## Backend Administration Console
+
+A modern browser dashboard provides:
+
+* Product management
+* Conversation monitoring
+* Order monitoring
+* Story management
+* AI controls
+* Product image uploads
+* Chat simulator
+* System health monitoring
+
+---
+
+# Technology Stack
+
+## Backend
 
 * Python
-* Streamlit
-* Pandas
-* Plotly
-* Matplotlib
-* WordCloud
-* Emoji
-* URLExtract
-* Regular Expressions (Regex)
+* Flask
+* SQLite
+* Gunicorn
 
 ---
 
-## Project Structure
+## Frontend
 
-```text
-Chatlytics_AI/
-│
-├── app.py
-├── helper.py
-├── preprocessor.py
-├── executive.py
-├── health.py
-├── recommendations.py
-├── requirements.txt
-├── README.md
-└── sample_chat.txt
-```
+* HTML5
+* CSS3
+* Vanilla JavaScript
 
 ---
 
-## Installation
+## Artificial Intelligence
 
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/Chatlytics-AI.git
-```
-
-Move into the project directory:
-
-```bash
-cd Chatlytics-AI
-```
-
-Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-streamlit run app.py
-```
+* OpenAI GPT models
+* Prompt Engineering
+* Context-aware conversation management
 
 ---
 
-## How to Export a WhatsApp Chat
+## APIs
 
-1. Open the desired WhatsApp conversation.
-2. Tap **More** (or the three-dot menu).
-3. Select **Export Chat**.
-4. Choose **Without Media**.
-5. Save the exported `.txt` file.
-6. Upload the file into Chatlytics AI.
+* Meta WhatsApp Cloud API
+* OpenAI API
 
 ---
 
-## Dashboard Highlights
+## Database
 
-The dashboard provides:
+SQLite
 
-* Executive Intelligence Panel
-* Conversation Health Score
-* KPI Metrics
-* Monthly Trend Analysis
-* Daily Trend Analysis
-* Participant Activity Analysis
-* Word Frequency Analysis
-* Emoji Analytics
-* Word Cloud
-* Downloadable Processed Dataset
+Tables include:
+
+* products
+* story_items
+* customers
+* conversations
+* orders
 
 ---
 
-## Future Improvements
+# AI Workflow
+
+Customer Message
+
+↓
+
+Webhook
+
+↓
+
+Message Parser
+
+↓
+
+Conversation Memory
+
+↓
+
+Product Search Engine
+
+↓
+
+Prompt Engineering
+
+↓
+
+LLM Response Generation
+
+↓
+
+WhatsApp Cloud API
+
+↓
+
+Customer
+
+---
+
+# Engineering Highlights
+
+The project demonstrates practical implementation of:
+
+* Conversational AI
+* Retrieval-Augmented Generation (RAG)-style product retrieval
+* REST API design
+* Database engineering
+* AI prompt engineering
+* Context management
+* Image handling
+* Webhook architecture
+* Business workflow automation
+* CRUD operations
+* Production deployment
+
+---
+
+# Deployment
+
+The application is deployed using Render with Gunicorn serving the Flask application.
+
+The backend communicates securely with:
+
+* Meta WhatsApp Cloud API
+* OpenAI API
+
+Environment variables are used for all sensitive credentials.
+
+---
+
+# Challenges Solved
+
+During development several engineering challenges were encountered and resolved, including:
+
+* Git history recovery after accidental hard resets
+* Render deployment issues
+* Gunicorn startup failures
+* Dependency conflicts
+* Cython import errors
+* Webhook verification
+* Image upload handling
+* Relative versus absolute image URLs
+* Persistent storage limitations on Render
+* SQLite deployment considerations
+* WhatsApp webhook debugging
+* AI context improvements
+* Product retrieval optimisation
+
+These challenges significantly improved the robustness and maintainability of the final application.
+
+---
+
+# Future Improvements
 
 Planned enhancements include:
 
-* AI-powered conversation summarisation
-* Sentiment analysis
-* Topic modelling
-* Emotion detection
-* Response time analysis
-* Conversation network graphs
-* Machine learning-based engagement prediction
-* PDF report generation
-* Multi-language support
+* PostgreSQL production database
+* Cloudinary image storage
+* Payment gateway integration
+* Automatic payment verification
+* Inventory analytics dashboard
+* Customer recommendation engine
+* Vector database semantic search
+* Voice message understanding
+* OCR for payment receipts
+* Multi-vendor support
+* Admin authentication
+* Sales analytics
+* Customer segmentation
+* Recommendation system
+* Docker deployment
+* Kubernetes support
 
 ---
 
-## Author
+# Learning Outcomes
 
-**Amin Muhammed Badawi**
+This project demonstrates practical experience with:
 
-Data Science Consultant
+* Artificial Intelligence
+* Machine Learning integration
+* Large Language Models
+* Prompt Engineering
+* Full Stack Development
+* REST APIs
+* Cloud Deployment
+* Meta Developer Platform
+* Database Design
+* Production Debugging
+* Git Version Control
+* Conversational Commerce
+
+---
+
+# Author
+
+**Badawi Aminu Muhammed**
+
+Data Scientist | AI & Machine Learning Engineer | M&E Analytics Specialist
 
 📧 Email: [cigma.generalsolutions@gmail.com](mailto:cigma.generalsolutions@gmail.com)
 
@@ -197,4 +401,3 @@ This project was independently designed and implemented to demonstrate practical
 * Natural Language Processing
 * Python Software Development
 
-It serves as a portfolio project showcasing end-to-end data application development, from data ingestion and preprocessing to analytics, visualisation, and user-facing deployment.
